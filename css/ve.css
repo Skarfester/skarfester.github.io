@@ -1,0 +1,259 @@
+/* Variables */
+html {
+    --fons: #272727;
+    --fons2: #232323;
+    --negre: #0C090A;
+    --text: #d4d4d4;
+    --link: #a7d350;
+    --visitat: #8fb839;
+    --ia: orange;
+    --petit: 0.8rem;
+    --cos: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+    --encap: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+
+}
+/* Blocs */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--cos);
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text);
+    background-color: var(--negre);
+}
+header, footer {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--fons2);
+    text-align: center;
+}
+/* main + aside */
+div.pagina {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--fons);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+main {
+    flex: 1;
+    padding: 2rem;
+    height: 100%;
+    border-left: 2px solid var(--fons2);
+}
+/* Menú */
+aside {
+    flex: 0 0 auto;
+    position: sticky; /* fixat a dalt */
+    top: 0rem;
+    padding: 2rem;
+}
+aside ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* Enllaços menú */
+aside a {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 1rem;
+    font-size: 1rem;
+    line-height: 2rem;
+    color: var(--text);
+    border-radius: 10px;
+    background-color: var(--fons);
+    text-decoration: none;
+}
+aside a:visited {
+    color: var(--text);
+}
+aside a:hover {
+    background-color: var(--link);
+    color: var(--negre);
+    text-decoration: none;
+}
+/* Peu de pàgina */
+footer p {
+    margin: 0;
+    padding: 2rem 0;
+    font-size: var(--petit);
+}
+/* Seccions */
+article {
+    padding-bottom: 3rem;
+    border-bottom: 2px solid var(--fons2);
+}
+main article:last-child {
+    border-bottom: 0;
+}
+article div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 10px;
+}
+/* enllaç genèric */
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:visited {
+    color: var(--visitat);
+}
+a:active {
+    color: var(--negre);
+    background-color: var(--link);
+}
+/* Enllaços caràtules */
+article div a {
+    flex: 0;
+    color: var(--text);
+    background-color: var(--fons);
+    border-radius: 10px;
+    text-decoration: none;
+}
+article div a:visited {
+    color: var(--text);
+    background-color: var(--fons2);
+}
+/* colors enllaços */
+article div a:hover {
+    background-color: var(--link);
+    color: var(--negre);
+    text-decoration: none;
+}
+#ve a:hover {
+    background-color: #15317E;
+    color: var(--text);
+}
+#vep a:hover {
+    background-color: #C11B17;
+    color: var(--text);
+}
+#vec a:hover {
+    background-color: #F535AA;
+    color: var(--negre);
+}
+#veso a:hover {
+    background-color: #FF7F50;
+    color: var(--negre);
+}
+#nuv a:hover {
+    background-color: #54C571;
+    color: var(--negre);
+}
+#ar a:hover {
+    background-color: #307D7E;
+    color: var(--negre);
+}
+#vest a:hover {
+    background-color: #2B3856;
+    color: var(--text);
+}
+#mt a:hover {
+    background-color: #FFF8C6;
+    color: var(--negre);
+}
+#vepm a:hover {
+    background-color: #E2A76F;
+    color: var(--negre);
+}
+#vefu a:hover {
+    background-color: black;
+    color: var(--text);
+}
+#vez a:hover {
+    background-color: #827839;
+    color: var(--negre);
+}
+article div a:active, aside a:active {
+    opacity: 50%;
+}
+/* caràtules */
+figure {
+    margin: 0;
+    width: 127px;
+    padding: 10px;
+    text-align: center;
+}
+/* marca IA */
+figcaption sup, p.petit sup { 
+    background-color: var(--ia);
+    color: var(--negre);
+    font-size: var(--petit);
+    padding: 1px 5px;
+    border-radius: 5px;
+}
+/* Blocs de text */
+main p {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 0 1rem 10px;
+}
+p.petit {
+    margin-top: 2rem;
+    font-size: var(--petit);
+}
+/* llicència */
+span.license {
+    font-size: 1.2rem;
+}
+span.license a {
+    color: var(--text);
+}
+span.license a:active {
+    color: var(--negre);
+}
+/* Encapçalaments */
+h1 {
+    margin: 0;
+    padding: 2rem 0;
+    font-family: var(--encap);
+    font-weight: 500;
+    font-size: 4rem;
+    text-shadow: 3px 3px 3px var(--negre);
+}
+h2 {
+    font-family: var(--encap);
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 2px var(--negre);
+}
+/* Adaptació a mòbil */
+@media screen and (max-width: 765px) {
+    div.pagina {
+        flex-flow: column nowrap;
+    }
+    aside {
+        padding-top: 0;
+        padding-bottom: 0;
+        background-color: var(--fons2);
+        
+    }
+    aside ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+    aside a {
+        background-color: var(--fons2);
+        
+    }
+}
