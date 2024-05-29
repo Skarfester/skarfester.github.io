@@ -235,9 +235,11 @@ h2 {
     div.pagina {
         flex-flow: column nowrap;
     }
+    main {
+        padding: 1rem;
+    }
     aside {
-        padding-top: 0;
-        padding-bottom: 0;
+        padding: 0 1rem;
         background-color: var(--fons2);
         
     }
