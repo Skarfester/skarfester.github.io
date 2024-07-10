@@ -6,7 +6,7 @@ html {
     --text: #d4d4d4;
     --link: #a7d350;
     --visitat: #8fb839;
-    --ia: orange;
+    --ia: #ffb700;
     --petit: 0.8rem;
     --cos: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
     --encap: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
@@ -54,13 +54,13 @@ aside {
     top: 0rem;
     padding: 2rem;
 }
-aside ul {
+aside ul, nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 /* Enllaços menú */
-aside a {
+aside a, nav a {
     display: block;
     box-sizing: border-box;
     width: 100%;
@@ -69,13 +69,12 @@ aside a {
     line-height: 2rem;
     color: var(--text);
     border-radius: 10px;
-    background-color: var(--fons);
     text-decoration: none;
 }
-aside a:visited {
+aside a:visited, nav a:visited {
     color: var(--text);
 }
-aside a:hover {
+aside a:hover, nav a:hover {
     background-color: var(--link);
     color: var(--negre);
     text-decoration: none;
@@ -190,18 +189,25 @@ article div a:active, aside a:active {
 }
 /* caràtules */
 figure {
+    position: relative;
     margin: 0;
     width: 127px;
     padding: 10px;
     text-align: center;
 }
 /* marca IA */
-figcaption sup, p.petit sup { 
+span.ia { 
     background-color: var(--ia);
     color: var(--negre);
-    font-size: var(--petit);
-    padding: 1px 5px;
-    border-radius: 5px;
+    padding: 0.2rem 0.25rem;
+    border-radius: 50%;
+}
+figure span.ia {
+    padding: 0.2rem 0.4rem;
+    filter: drop-shadow(3px 3px 3px var(--negre));
+    position: absolute;
+    top: 140px;
+    right: 20px;
 }
 /* Blocs de text */
 main p {
@@ -216,22 +222,31 @@ p.petit {
 /* Encapçalaments */
 h1 {
     margin: 0;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     font-family: var(--encap);
     font-weight: 500;
-    font-size: 4rem;
+    font-size: 4rem; /* fallback */
+    font-size: clamp(2.2rem, 4vw, 4rem);
     text-shadow: 3px 3px 3px var(--negre);
 }
 h2 {
     font-family: var(--encap);
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* fallback */
+    font-size: clamp(1.6rem, 2.5vw, 2.5rem);
     margin-top: 3rem;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 2px var(--negre);
 }
+/* Menú */
+input#menu {
+    display: none; /* sempre ocult */
+}
+nav {
+    display: none; /* ocultar per a escriptori */
+}
 /* Adaptació a mòbil */
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 930px) {
     div.pagina {
         flex-flow: column nowrap;
     }
@@ -239,19 +254,31 @@ h2 {
         padding: 1rem;
     }
     aside {
-        padding: 0 1rem;
-        background-color: var(--fons2);
-        
+        display: none; /* ocultar barra lateral */       
     }
-    aside ul {
-        display: flex;
+    nav {
+        display: block; /* mostrar botó menú */
+        background-color: var(--fons2);
+        width: 100%;
+        border-top: 2px solid var(--fons);
+    }
+    nav label {
+        display: block;
+        cursor: pointer;
+        padding-left: 1rem;
+    }
+    nav  ul {
+        display: none;
+        padding-bottom: 1rem;
         flex-flow: row wrap;
         justify-content: flex-start;
         align-items: flex-start;
         align-content: flex-start;
     }
-    aside a {
-        background-color: var(--fons2);
-        
+    input#menu:checked + nav svg {
+        fill: var(--link);
+    }
+    input#menu:checked + nav ul {
+        display: flex; /* mostrar menú al fer click */
     }
 }
