@@ -263,6 +263,15 @@ a.top {
 a.top:hover {
 	opacity: 1;
 }
+
+/* Registre de canvis */
+pre {
+	margin: 2rem;
+	/* white-space: pre-wrap; */
+	tab-size: 6;
+	overflow: auto;
+}
+
 /* Adaptació a mòbil */
 @media screen and (max-width: 930px) {
     div.pagina {
@@ -302,4 +311,10 @@ a.top:hover {
     input#menu:checked + nav ul {
         display: flex; /* mostrar menú al fer click */
     }
+	/* registre de canvis */
+	pre {
+		margin: 2rem 10px;
+		font-size: var(--petit);
+		width: 80vw;
+	}
 }
