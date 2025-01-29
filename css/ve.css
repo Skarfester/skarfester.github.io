@@ -10,6 +10,7 @@ html {
     --petit: 0.8rem;
     --cos: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
     --encap: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+	/* scroll-behavior: smooth; */
 
 }
 /* Blocs */
@@ -74,7 +75,7 @@ aside a, nav a {
 aside a:visited, nav a:visited {
     color: var(--text);
 }
-aside a:hover, nav a:hover {
+aside a:hover, nav a:hover, aside a:focus, nav a:focus {
     background-color: var(--link);
     color: var(--negre);
     text-decoration: none;
@@ -96,7 +97,7 @@ article {
     padding-bottom: 3rem;
     border-bottom: 2px solid var(--fons2);
 }
-main article:last-child {
+main article:last-of-type {
     border-bottom: 0;
 }
 article div {
@@ -112,7 +113,7 @@ a {
     color: var(--link);
     text-decoration: none;
 }
-a:hover {
+a:hover, a:focus {
     text-decoration: underline;
 }
 a:visited {
@@ -135,52 +136,52 @@ article div a:visited {
     background-color: var(--fons2);
 }
 /* colors enllaços */
-article div a:hover {
+article div a:hover, article div a:focus {
     background-color: var(--link);
     color: var(--negre);
     text-decoration: none;
 }
-#ve a:hover {
+#ve a:hover, #ve a:focus {
     background-color: #15317E;
     color: var(--text);
 }
-#vep a:hover {
+#vep a:hover, #vep a:focus {
     background-color: #C11B17;
     color: var(--text);
 }
-#vec a:hover {
+#vec a:hover, #vec a:focus {
     background-color: #F535AA;
     color: var(--negre);
 }
-#veso a:hover {
+#veso a:hover, #veso a:focus {
     background-color: #FF7F50;
     color: var(--negre);
 }
-#nuv a:hover {
+#nuv a:hover, #nuv a:focus {
     background-color: #54C571;
     color: var(--negre);
 }
-#ar a:hover {
+#ar a:hover, #ar a:focus {
     background-color: #307D7E;
     color: var(--negre);
 }
-#vest a:hover {
+#vest a:hover, #vest a:focus {
     background-color: #2B3856;
     color: var(--text);
 }
-#mt a:hover {
+#mt a:hover, #mt a:focus {
     background-color: #FFF8C6;
     color: var(--negre);
 }
-#vepm a:hover {
+#vepm a:hover, #vepm a:focus {
     background-color: #E2A76F;
     color: var(--negre);
 }
-#vefu a:hover {
+#vefu a:hover, #vefu a:focus {
     background-color: black;
     color: var(--text);
 }
-#vez a:hover {
+#vez a:hover, #vez a:focus {
     background-color: #827839;
     color: var(--negre);
 }
@@ -238,12 +239,29 @@ h2 {
     margin-bottom: 1rem;
     text-shadow: 2px 2px 2px var(--negre);
 }
-/* Menú */
+/* Menú escriptori */
 input#menu {
     display: none; /* sempre ocult */
 }
 nav {
     display: none; /* ocultar per a escriptori */
+}
+/* Botó tornar a dalt */
+a.top {
+	display: inline-block;
+	position: fixed;
+	bottom: 1rem;
+	right: min(3rem,5vw);
+	line-height: 1rem;
+	opacity: 0.5;
+    padding: 0.5rem;
+    background-color: var(--text);
+    color: var(--negre);
+    border-radius: 50%;
+    text-decoration: none;
+}
+a.top:hover {
+	opacity: 1;
 }
 /* Adaptació a mòbil */
 @media screen and (max-width: 930px) {
@@ -258,6 +276,9 @@ nav {
     }
     nav {
         display: block; /* mostrar botó menú */
+		/* position: sticky;
+		z-index: 2; */
+		top: 0;
         background-color: var(--fons2);
         width: 100%;
         border-top: 2px solid var(--fons);

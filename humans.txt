@@ -1,0 +1,10 @@
+/* TEAM */
+	Author: David F. Fernández
+
+/* THANKS */
+	Grapas & Mapas, Javier García “Cabo Hicks”, comunidad Vieja Escuela
+
+/* SITE */
+	Page: Vieja Escuela el juego de rol
+	Language: Spanish
+	Notes: Written from scratch with good ol' HTML and CSS
