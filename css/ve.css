@@ -51,7 +51,7 @@ main {
 aside {
     flex: 0 0 auto;
     position: sticky; /* fixat a dalt */
-    top: 0rem;
+    top: 0;
     padding: 2rem;
 }
 aside ul, nav ul {
@@ -185,7 +185,7 @@ article div a:hover, article div a:focus {
     color: var(--negre);
 }
 article div a:active, aside a:active {
-    opacity: 50%;
+    opacity: .5;
 }
 /* caràtules */
 figure {
@@ -215,7 +215,7 @@ main p {
     max-width: 960px;
     margin: 0 0 1rem 10px;
 }
-p.petit {
+.petit {
     margin-top: 2rem;
     font-size: var(--petit);
 }
@@ -239,7 +239,7 @@ h2 {
     text-shadow: 2px 2px 2px var(--negre);
 }
 /* Menú escriptori */
-input#menu {
+#menu {
     display: none; /* sempre ocult */
 }
 nav {
@@ -304,10 +304,10 @@ pre {
         align-items: flex-start;
         align-content: flex-start;
     }
-    input#menu:checked + nav svg {
+    #menu:checked + nav svg {
         fill: var(--link);
     }
-    input#menu:checked + nav ul {
+    #menu:checked + nav ul {
         display: flex; /* mostrar menú al fer click */
     }
 	/* registre de canvis */
