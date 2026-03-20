@@ -19,10 +19,11 @@ html {
     --vefu: black;
     --vez: #827839;
     --vmt: #531053;
+    --co: whitesmoke;
     --petit: 0.8rem;
     --cos: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
     --encap: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
-	/* scroll-behavior: smooth; */
+    scroll-padding-top: 1rem;
 }
 /* Blocs */
 body {
@@ -108,6 +109,18 @@ footer a:active {
 article {
     padding-bottom: 3rem;
     border-bottom: 2px solid var(--fons2);
+}
+/* Animació color títol */
+article:target > h2 {
+	animation: Color 1s ease-in;
+}
+@keyframes Color {
+	0%{
+		text-shadow: 2px 2px 20px var(--link);
+	}
+	100% {
+		text-shadow: inherit;
+	}
 }
 main > article:last-of-type {
     border-bottom: 0;
@@ -200,6 +213,9 @@ article > div > a:hover, article > div > a:focus {
 #vmt a:hover, #vmt a:focus {
     background-color: var(--vmt);
     color: var(--text);
+}
+#co a:hover, #co a:focus {
+	background-color: var(--co);
 }
 article > div > a:active, aside a:active {
     opacity: .5;
