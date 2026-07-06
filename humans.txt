@@ -15,13 +15,13 @@ o=========o
     | |		comunidad Vieja Escuela
     | |
     | |		/* SITE */
-    | |		Page: Vieja Escuela el juego de rol
+    | |		Page: Recopilatorio Vieja Escuela el juego de rol
     | |		Language: Spanish
     | |		Written from scratch with good ol' HTML and CSS
     | |
-    | |
-    | |
-    | |
+    | |		Page: Manual Vieja Escuela el juego de rol
+    | |		Language: Spanish
+    | |		Built with Astro web framework
     | |
     | |
     | |
