@@ -1,0 +1,6 @@
+/* Imatge de fons */
+body {
+	background-image: url("./img/pedra.avif");
+	background-size: 1024px 1024px;
+	background-repeat: repeat;
+}
